@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script type="text/javascript">
+        //This code will manipulate arrays as an object
+
+        // as a list
+        arr1 = ['car',34.5,true,'kdjhas',678];
+        //arr1 = new Array('car',34.5,true,'kdjhas',678); is an alternate
+        document.write('<h1>'+'arr1 is of type: '+typeof(arr1)+'</h1>');
+        for(var i = 0; i<5; ++i){
+            document.write('<h2>'+arr1[i]+'</h2>');
+        }
+
+        // as we see a lot of data types can be in a array.
+        //Now onto some methods..
+
+        document.write('<h3>'+'size of arr1: '+arr1.length+'</h3>');
+
+        arr1.push('Soham');
+        document.write('<h3>'+'size of arr1: '+arr1.length+'</h3>');
+
+        text = '<ul>';
+        function ModifyDisplay(val){
+            text+='<li>'+val+'</li>';
+        }
+        arr1.forEach(ModifyDisplay);
+        text+='</ul>';
+        document.write(text);
+
+        //detect an array
+
+        document.write(Array.isArray(arr1)+'<br>');
+        document.write(Array.isArray(arr1[0]));
+
+        //toString and join
+
+        document.write('<h3>'+arr1.toString()+'</h3>');
+        document.write('<h3>'+arr1.join('/')+'</h3>');
+
+        //shift and unshift
+
+        var first = arr1.shift();
+        document.write('<h4>'+first+'</h4>');
+        document.write('<h4>'+arr1.length+'</h4>');
+
+
+        arr1.unshift('car');
+        document.write('<h4>'+arr1+'</h4>');
+
+        //splicing and slicing
+        //array.splice(index-start, no-of-elements-to-be-deleted,list of elements to be added)
+        arr1.splice(1,0,'Mistri',78,false);
+        document.write('<h4>'+arr1+'</h4>');
+        arr1.splice(2,3);
+        document.write('<h4>'+arr1+'</h4>');
+
+        //slice returns a new array from start to end excluding end
+        arr2 = arr1.slice(2,4);
+        document.write('<h4>'+arr2+'</h4>');
+
+        //merge
+        arr1 = arr1.concat(arr2);
+        document.write('<h4>'+arr1+'</h4>');
+
+        //sort
+
+        arr3 = ['banana','apple','pear','guava'];
+        arr3.sort();
+        document.write('<h4>'+arr3+'</h4>');
+        arr4 = [1,20,23,4,100,34];
+        // arr4.sort(); only alpha sort
+        arr4.sort(function(a,b){return a-b;});
+        document.write('<h4>'+arr4+'</h4>');
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+    <script type="text/javascript">
+        var n = 5;
+        document.write('<h1>'+typeof(n)+'</h1>');
+
+        var n1 = 10;
+        var n2 = '20';
+        document.write('<h1>'+n1+n2+'</h1>');
+
+        var n3 = 10+n1+n2;
+        document.write('<h1>'+n3+'</h1>');
+
+        var n4 = '1000';
+        var n5 = '10';
+        document.write('<h2>'+typeof(n4/n5)+'</h2>');
+
+        var n6 = 100;
+        var s = n6.toString();
+        document.write('<h3>'+typeof(s)+'</h3>');
+
+
+        //toFixed--> for no. of decimal places
+        var decimal = 9.8734519;
+        document.write('<h3>'+decimal.toFixed(6)+'</h3>');
+        document.write('<h3>'+decimal.toFixed(1)+'</h3>');
+
+        //toPrecision-->length
+        document.write('<h3>'+decimal.toPrecision(6)+'</h3>');
+        document.write('<h3>'+decimal.toPrecision(1)+'</h3>');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <script type="text/javascript">
+        var s = 'Soham';
+        document.write('<h1>'+typeof(s)+'</h1>');
+        document.write('<h1>'+s.length+'</h1>');
+        var pos = s.indexOf('h');
+        document.write('<h2>'+pos+'</h2>');
+        s+='soham';
+        var pos = s.lastIndexOf('h');
+        document.write('<h2>'+pos+'</h2>');
+
+        //substrings
+        var s1 = s.slice(3,9);  
+        // another is s.substring() but this cant accept -ve
+        document.write('<h2>'+s1+'</h2>');
+        var s2 = s.substr(3,9);
+        //2nd param in substr is length
+        document.write('<h2>'+s2+'</h2>');
+
+        //replace, upper and lower case
+        var s3 = s.replace('ham','tri');
+        document.write('<h3>'+s3+'</h3>');
+        var s4 = s.toUpperCase();
+        document.write('<h3>'+s4+'</h3>');
+        var s5 = s.toLowerCase();
+        document.write('<h3>'+s5+'</h3>');
+
+        //split
+        var s_list = 'apple,banana,pear,guava,pomgrenate';
+        var arr = s_list.split(',');
+        document.write('<h3>'+arr[2]+'</h3>');
+        document.write('<h3>'+typeof(arr)+'</h3>');
+        arr2 = s.split('');
+        document.write('<h3>'+arr2+'</h3>');
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
