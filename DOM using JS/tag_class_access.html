@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags access</title>
+    <script type="text/javascript">
+    function change(){
+        var ele = document.getElementsByTagName('p');//gives an arr of p
+        for(var i=0; i<ele.length;++i){
+            ele[i].style.color = 'red';
+            ele[i].style.fontSize = '50px';
+            ele[i].style.fontWeight = 'bold';
+        }
+    }
+
+    function changeClass(){
+        var ele = document.getElementsByClassName('tobe');//gives an arr of p
+        for(var i=0; i<ele.length;++i){
+            ele[i].style.color = 'blue';
+            ele[i].style.fontSize = '25px';
+            ele[i].style.fontWeight = 'emphasis';
+        }
+    }
+    </script>
+</head>
+<body>
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+    <p>This is paragraph 4.</p>
+
+
+    <button onclick="change()">Click Me!</button>
+
+    <p class = 'tobe'>This is paragraph 1.</p>
+    <p>This is paragraph 1.</p>
+    <p class = 'tobe'>This is paragraph 1.</p>
+    <p class ='tobe'>This is paragraph 1.</p>
+
+    <button onclick="changeClass()">Click Me!</button>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio button</title>
+    <script type="text/javascript">
+        function choice(){
+            var rd1 = document.getElementById('rd1');
+            var rd2 = document.getElementById('rd2');
+            var rd3 = document.getElementById('rd3');
+
+            if(rd1.checked==true)
+                alert('College chosen is: '+rd1.value);
+            else if(rd2.checked==true)
+                alert('College chosen is: '+rd2.value);
+            else if(rd3.checked==true)
+                alert('College chosen is: '+rd3.value);
+            else
+                alert('No college chosen');
+        }
+    </script>
+</head>
+<body>
+    <input name='grp' type="radio" value="IIT Bombay" id='rd1'>
+    <label for="IIT Bombay">IIT Bombay</label><br>
+    <input name='grp' type="radio" value="IIT Delhi" id='rd2'>
+    <label for="IIT Delhi">IIT Delhi</label><br>
+    <input name='grp' type="radio" value="IIT Kanpur" id='rd3'>
+    <label for="IIT Kanpur">IIT Kanpur</label><br>
+    <button onclick="choice()" id='submit'>Submit</button>
+</body>
+</html>

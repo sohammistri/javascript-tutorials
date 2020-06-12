@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down</title>
+    <script type='text/javascript'>
+    function f(){
+        var obj = document.getElementById('selectbox');
+        var text = obj.options[obj.selectedIndex].value;
+        if(text=='select'){
+            alert('No option yet selected');
+        }
+        else{
+            alert('Chosen option: '+text);
+        }
+    }
+    </script>
+</head>
+<body>
+    <select id='selectbox'>
+        <option value="select">--Select--</option>
+        <option value="IIT Bombay">IIT Bombay </option>
+        <option value="IIT Delhi">IIT Delhi </option>
+        <option value="IIT Kanpur">IIT Kanpur </option>
+    </select><br>
+
+    <button onclick="f()">Submit</button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script type='text/javascript'>
+        function validate(){
+            var uname = document.getElementById('username').value;
+            var pwd = document.getElementById('password').value;
+            
+            if(uname=='dont_care1'&&pwd=='dola1#2pankaj'){
+                alert('Username and password match');
+            }
+            else{
+                alert('Username and password dont match');
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id = 'username' placeholder="Enter username"><br>
+    <input type="password" id='password' placeholder="Enter password"><br>
+    <button onclick="validate()" id='submit'>Submit</button>
+    
+</body>
+</html>
