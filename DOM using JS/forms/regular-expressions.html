@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular-expressions</title>
+    <script type='text/javascript'>
+        function action(){
+            var username = document.getElementById('text-box').value;
+            var reg_ex = /[art]00/;//[^art] to all except these, and [a-x] for range.. i for case insensitivity and [a-z0-9] for consecutive ranges
+            if(reg_ex.test(username)){
+                alert('Valid Username');
+            }
+            else{
+                alert('Invalid Username');
+                box = document.getElementById('ubox');
+                box.style.visibility = 'visible';
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" placeholder="Username" id='text-box'>
+    <label for='Username' id="ubox" style="color: red; visibility: hidden;">Invalid Username</label>
+    <br><br>
+    <button onclick="action()" type="button" id='submit'>Submit</button>
+</body>
+</html>

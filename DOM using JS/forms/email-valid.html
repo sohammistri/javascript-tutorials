@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile No.</title>
+    <script type="text/javascript">
+        function validate(){
+            var email = document.getElementById('email').value;
+            var box = document.getElementById('email-id');
+            var reg_ex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8}).([a-z]{2,8})?$/;
+            //email has 4 parts(3 also possible)
+            //username(any char, no.,. and - )
+            //domain(gmail,yahoo again same)
+            //extension1(com,co,edu etc.. contains text only and small)
+            //extension2(optional like in,uk,us etc..)
+            if(reg_ex.test(email)){
+                alert('Valid email');
+                box.innerHTML = 'Valid';
+                box.style.color = 'green';
+                box.style.visibility = 'visible';
+            }
+            else{
+                alert('Invalid email');
+                box.innerHTML = 'Invalid';
+                box.style.color = 'red';
+                box.style.visibility = 'visible';
+            }
+        }
+    </script>
+</head>
+<body>
+   <input type="text" placeholder="Email Id" id="email">
+   <label for='email' id='email-id' style="color: red; visibility: hidden;">Invalid email</label> 
+   <button type="button" onclick="validate()">Submit</button>
+</body>
+</html>

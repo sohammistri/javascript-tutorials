@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script type="text/javascript">
+        function validate(){
+            username = document.getElementById('uname');
+            password = document.getElementById('pwd');
+
+            if(username.value.trim()=="" || password.value.trim()==""){//trim for blank spaces
+                alert('Blank entries not allowed');
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()" action="message.html">
+        <input type="text" placeholder="Enter username" id='uname'><br>
+        <input type="password" placeholder="Enter password" id='pwd'><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+</body>
+</html>

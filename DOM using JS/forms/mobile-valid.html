@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile No.</title>
+    <script type="text/javascript">
+        function validate(){
+            var mob_no = document.getElementById('mobile').value;
+            var box = document.getElementById('mob-text');
+            var reg_ex = /^[6-9]\d{9}$/;
+            if(reg_ex.test(mob_no)){
+                alert('Valid ph.no.');
+                box.innerHTML = 'Valid';
+                box.style.color = 'green';
+                box.style.visibility = 'visible';
+            }
+            else{
+                alert('Invalid ph.no.');
+                box.innerHTML = 'Invalid';
+                box.style.color = 'red';
+                box.style.visibility = 'visible';
+            }
+        }
+    </script>
+</head>
+<body>
+   <input type="text" placeholder="Mobile no." id="mobile">
+   <label for='mob-no.' id='mob-text' style="color: red; visibility: hidden;">Invalid ph. no.</label> 
+   <button type="button" onclick="validate()">Submit</button>
+</body>
+</html>
