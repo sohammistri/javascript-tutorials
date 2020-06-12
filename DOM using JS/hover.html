@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <script type="text/javascript">
+        function changetoNew(){
+            document.getElementById('image').src = 'image/img-5.jpg';
+        }
+
+        function changetoOld(){
+            document.getElementById('image').src = 'image/img-1.jpg';
+        }
+    </script>
+</head>
+<body>
+    <img src="image/img-1.jpg" id="image" height = '500px' width = '50%' onmouseover="changetoNew()" onmouseout="changetoOld()"/>
+</body>
+</html>
